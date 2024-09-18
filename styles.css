@@ -1,0 +1,1408 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1, 5;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End of reset */
+
+/* Основные стили */
+
+:root {
+  --txt-color: #131515;
+  --secondary-txt-color: #4a585e;
+  --input-txt-color: #777;
+  --main-color: #fff;
+  --link-color: #0297d4;
+  --txt-marked-color: #f54932;
+  --primary-color: #1f1f1f;
+  --secondary-bg-color: #fff5cc;
+  --tird-bg-color: #f2f4f8;
+  --bg-color: #f3f6f9;
+  --footer_color: #586c75;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/fonts/SFProText-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Text Medium";
+  src: url("/fonts/SFProText-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Text Semibold";
+  src: url("/fonts/SFProText-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Text Bold";
+  src: url("/fonts/SFProText-Bold.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  pointer-events: painted;
+  color: var(--main-color);
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  font-family: "SF Pro Text", sans-serif;
+  font-size: 20px;
+  font-optical-sizing: auto;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 26px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.medium_txt {
+  font-family: "SF Pro Text Semibold";
+}
+
+.bold_txt {
+  font-family: "SF Pro Text Bold";
+}
+
+.small_txt {
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
+}
+
+@media (max-width: 1222px) {
+  .container {
+    max-width: 1222px;
+  }
+}
+
+/*  */
+
+.header {
+  background: var(--main-color);
+  display: flex;
+  padding: 22px 100px;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  gap: 135px;
+  align-items: center;
+}
+
+.contact a {
+  color: var(--txt-color);
+}
+
+.contact {
+  display: flex;
+  gap: 60px;
+}
+
+.main_btn {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "SF Pro Text Semibold";
+  background: var(--link-color);
+  border-radius: 50px;
+  padding: 16px 36px;
+}
+
+.bg_main {
+  background: url(./img/BG.png) center;
+  height: 142px;
+  font-family: "SF Pro Text Bold";
+  color: var(--main-color);
+}
+
+.bg_main_txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+u {
+  color: #6ad3ff;
+}
+
+/*  SECTION EVACUATOR*/
+
+.evacuator {
+  margin: 94px 0 80px;
+}
+
+.evacuator_items {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.evacuator_item {
+  display: flex;
+  padding: 40px 48px;
+  flex-direction: column;
+  gap: 28px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 2px 2px 10px 2px rgba(39, 52, 58, 0.15);
+}
+
+.evacuator_title {
+  font-size: 32px;
+  font-family: "SF Pro Text Bold";
+}
+
+.evacuator_info {
+  display: flex;
+  gap: 28px;
+}
+
+.evacuator_price {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--input-txt-color);
+}
+
+.price_item {
+  display: flex;
+  width: 498px;
+  padding: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background: #f2f4f8;
+}
+
+.evacuator_contacts {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.evacuator_contacts_phone {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.call_icon {
+  display: block;
+  background: url(./img/call.svg) no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.phone_icon {
+  display: block;
+  background-image: url(./img/phone.svg);
+  width: 24px;
+  height: 24px;
+}
+
+.evacuator_location_info {
+  border-radius: 10px;
+  display: flex;
+  padding: 16px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--secondary-bg-color);
+  margin-top: 10px;
+}
+
+.evacuator_location {
+  color: var(--input-txt-color);
+  background: url(./img/location.svg) no-repeat;
+  display: flex;
+  gap: 28px;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid var(--link-color);
+  color: var(--link-color);
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: none;
+  margin-top: 10px;
+}
+
+.btn > sup {
+  font-size: 12px;
+}
+
+.pagination {
+  margin-top: 60px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination > li > a,
+.slider-container > a {
+  display: block;
+  color: var(--link-color);
+  width: 52px;
+  height: 52px;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 8px;
+  border-color: var(--link-color);
+  font-size: 26px;
+  font-family: "SF Pro Text Bold";
+  text-align: center;
+}
+
+.pagination > li > a:hover,
+.slider-container > a:hover {
+  color: var(--main-color);
+  background-color: var(--link-color);
+}
+
+.arrow_right > svg > path,
+.arrow_left > svg > path {
+  stroke: var(--link-color);
+}
+
+.arrow_right:hover > svg > path,
+.arrow_left:hover > svg > path {
+  stroke: var(--main-color);
+}
+
+/* SECTION WORK_EVACUATOR */
+.work_evacuator_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work_evacuator_info {
+  display: flex;
+  justify-content: space-between;
+  padding: 96px 0 70px;
+  line-height: normal;
+}
+
+.work_evacuator_txt {
+  width: 698px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.evacuator_txt_title {
+  font-size: 40px;
+  font-family: "SF Pro Text Bold";
+}
+
+/*  SECTION ABOUT EVACUATION*/
+.about_evacoutor {
+  background: var(--secondary-bg-color);
+}
+
+.about_evacoutor_info {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.about_evacoutor_txt {
+  display: flex;
+  gap: 40px;
+  font-size: 26px;
+}
+
+.evacoutor_txt_item {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SECTION WHAT INSIDE */
+
+.what_inside {
+  margin: 100px 0;
+}
+
+.what_inside_info {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.what_inside_txt {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card_items {
+  display: flex;
+  gap: 24px;
+  color: var(--main-color);
+}
+
+.card_item {
+  width: 332px;
+  height: 344px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 104px 20px 20px;
+  text-align: center;
+  gap: 17px;
+}
+
+.card_1 {
+  background: url(./img/card_1.png) no-repeat;
+}
+.card_2 {
+  background: url(./img/card_2.png) no-repeat;
+}
+.card_3 {
+  background: url(./img/card_3.png) no-repeat;
+}
+.card_4 {
+  background: url(./img/card_4.png) no-repeat;
+}
+
+/* SECTION KIND_EVACUATION */
+.kind_evacuators {
+  padding: 100px 0;
+}
+
+.kind_evacuators_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.kind_evacuators_info {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.slider-container {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider_items {
+  display: flex;
+  gap: 32px;
+}
+
+.slider-items_mob {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  gap: 32px;
+}
+
+.slider_item {
+  height: 682px;
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+  background: var(--main-color);
+  box-shadow: 2px 2px 10px 2px rgba(39, 52, 58, 0.15);
+}
+/* SECTION ADVANTAGES */
+
+.advantages {
+  background: url(./img/white.png) no-repeat;
+  padding-top: 100px;
+}
+
+.advantages_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.advantages_txt {
+  display: flex;
+  justify-content: space-between;
+  word-wrap: normal;
+}
+
+.advantages_discriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.advantages_img {
+  width: 632px;
+  height: 645px;
+}
+
+.stick {
+  display: flex;
+  gap: 6px;
+}
+
+.stick > span {
+  background: url(./img/stick.png) no-repeat;
+  min-width: 38px;
+  width: 38px;
+  height: 32px;
+}
+
+/*  */
+
+.flex_info {
+  display: flex;
+  gap: 56px;
+  background-color: var(--secondary-bg-color);
+}
+
+.order_massage {
+  padding: 80px 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.padding_left {
+  padding: 80px 260px 0px 0px;
+}
+
+.advantages_info {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.advantages_ditails {
+  width: 684px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 48px;
+  border-radius: 20px;
+  background: var(--secondary-bg-color);
+}
+
+/* SECTION PRICE */
+
+.price_evacuator {
+  margin: 100px 0;
+}
+
+.price_btn {
+  padding: 20px 52px;
+  font-size: 32px;
+  border-radius: 20px 20px 0px 0px;
+  border: none;
+  background: transparent;
+}
+
+.price_btn.active {
+  background: var(--main-color);
+}
+
+.price_info {
+  display: none;
+  flex-direction: column;
+  gap: 32px;
+  background-color: var(--main-color);
+  border-radius: 0px 20px 20px 20px;
+  box-shadow: 2px 2px 10px 2px rgba(39, 52, 58, 0.15);
+  padding: 48px 60px 60px;
+}
+
+.price_info.active {
+  display: flex;
+}
+
+.price_factors {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.number_stick {
+  display: flex;
+  gap: 48px;
+}
+
+.number_1 {
+  background: url(./img/number_1.png) no-repeat;
+}
+
+.number_2 {
+  background: url(./img/number_2.png) no-repeat;
+}
+
+.number_3 {
+  background: url(./img/number_3.png) no-repeat;
+}
+
+.number_4 {
+  background: url(./img/number_4.png) no-repeat;
+}
+
+.number_5 {
+  background: url(./img/number_5.png) no-repeat;
+}
+
+.number_6 {
+  background: url(./img/number_6.png) no-repeat;
+}
+
+.number_7 {
+  background: url(./img/number_7.png) no-repeat;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--footer_color);
+  padding: 41px 0 87px;
+}
+
+.footer_info {
+  display: flex;
+  gap: 75px;
+}
+
+.footer_nav {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.footer_nav > a {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.home {
+  position: absolute;
+  right: 73px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--link-color);
+  opacity: 0.6;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home > svg > path {
+  fill: var(--link-color);
+}
+
+.home:hover {
+  background-color: var(--link-color);
+}
+
+.home:hover > svg > path {
+  fill: var(--main-color);
+}
+
+/* ANNUNCIATION */
+.annunciation {
+  margin: 60px 0 80px;
+}
+.annunciation_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.annunciation_header {
+  display: flex;
+  padding-right: 180px;
+}
+
+.form_wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 53px;
+  align-items: center;
+}
+
+.form_container {
+  max-width: 798px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  color: var(--secondary-txt-color);
+  font-size: 22px;
+}
+
+.input_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input_wrapper > input,
+.input_wrapper > select,
+.input_wrapper > textarea,
+.checkbox_price_item > input {
+  padding: 11px 24px 12px 24px;
+  border-radius: 10px;
+  border: 0.5px solid var(--link-color);
+  background: var(--main-color);
+  font-size: 26px;
+}
+
+.input_wrapper > input::placeholder,
+.input_wrapper > textarea::placeholder {
+  color: #b3c8d1;
+}
+
+.input_wrapper > select {
+  background: url(./img/down_button.png) no-repeat;
+  background-position: right 24px center;
+  appearance: none; /* Для всех современных браузеров */
+  background-color: var(--main-color); /* Это очень важно */
+  color: var(--primary-color);
+}
+
+.input_wrapper > textarea {
+  resize: none;
+  height: 346px;
+}
+
+.checkbox_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox_currency {
+  margin-left: 16px;
+}
+
+.checkbox_tick {
+  display: flex;
+  gap: 12px;
+  position: relative;
+  align-items: start;
+}
+
+.checkbox + label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(/img/checkbox_empty.png);
+}
+
+.checkbox:checked + label::after {
+  background: url(/img/checkbox_fill.png);
+}
+
+.ad_photo {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+}
+
+.photo_btn {
+  width: 263px;
+}
+
+.photo_btn::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.photo_btn::before {
+  content: "Загрузить";
+  width: 100%;
+  display: inline-block;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.deal {
+  margin-top: 32px;
+}
+
+.submit_btn {
+  text-decoration: none;
+  pointer-events: painted;
+  color: var(--main-color);
+  border: none;
+  font-size: 20px;
+  padding: 16px 56px;
+}
+
+.submit_btn:hover {
+  opacity: 0.7;
+}
+
+.line_txt {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  font-weight: bold;
+  width: 100%;
+}
+
+.line_txt::before,
+.line_txt::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--link-color);
+}
+
+.line_txt::before {
+  margin-right: 20px;
+}
+
+.line_txt::after {
+  margin-left: 20px;
+}
+
+/*  */
+
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: 16px 20px;
+    gap: 20px;
+    font-size: 16px;
+  }
+  footer {
+    padding: 16px 0;
+    gap: 16px;
+  }
+  .container {
+    max-width: 860px;
+    padding: 0 20px;
+  }
+
+  .contact {
+    gap: 20px;
+  }
+
+  .nav {
+    gap: 30px;
+  }
+  .annunciation {
+    margin: 28px 0 28px;
+  }
+
+  .annunciation_header > img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .bg_main_txt {
+    font-size: 36px;
+  }
+  .bg_main {
+    height: 80px;
+  }
+
+  .footer_nav > a {
+    font-size: 16px;
+    text-transform: lowercase;
+  }
+  .footer_nav {
+    align-items: start;
+    gap: 14px;
+  }
+  .footer_info {
+    align-items: center;
+    gap: 26px;
+  }
+}
+
+@media screen and (max-width: 689px) {
+  h3 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+  .contact {
+    display: none;
+  }
+  .container {
+    max-width: 689px;
+    padding: 0 20px;
+  }
+  .bg_main_txt {
+    font-size: 26px;
+  }
+  .bg_main {
+    height: 60px;
+  }
+
+  /* EVACUATOR 375PX */
+
+  .evacuator {
+    margin: 28px 0 28px;
+  }
+
+  .evacuator_items {
+    gap: 22px;
+  }
+
+  .evacuator_item {
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+  }
+  .evacuator_2,
+  .evacuator_3,
+  .evacuator_4 {
+    display: none;
+  }
+  .evacuator_title {
+    text-align: center;
+  }
+
+  .evacuator_info {
+    flex-direction: column;
+  }
+
+  .evacuator_price {
+    align-items: center;
+    font-size: 17px;
+    padding: 6px 8px;
+  }
+
+  .price_item {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .note {
+    font-size: 14px;
+  }
+
+  .pagination {
+    margin-top: 16px;
+  }
+
+  /* WORK EVACUATION */
+
+  .bg_main {
+    height: 128px;
+  }
+
+  .work_evacuator_header {
+    gap: 12px;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .work_evacuator_header > img {
+    display: none;
+  }
+  .work_evacuator_header > h3 {
+    font-size: 18px;
+  }
+
+  .bg_main_txt > span {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .work_evacuator_info {
+    flex-direction: column;
+    padding: 40px 0 20px;
+  }
+
+  .work_evacuator_txt {
+    width: 100%;
+    gap: 18px;
+  }
+
+  .work_evacuator_txt > h3 {
+    font-size: 26px;
+  }
+
+  /* ABOUT EVACOUTOR */
+
+  .about_evacoutor_info {
+    padding: 30px 0 20px;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .about_evacoutor_txt {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .evacoutor_txt_item > img {
+    max-width: 280px;
+    max-height: 280px;
+  }
+  .evacoutor_txt_item > p {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* WHAT_INSIDE 375PX */
+
+  .what_inside {
+    margin: 30px 0 30px;
+  }
+  .what_inside_info {
+    gap: 20px;
+  }
+
+  .what_inside_txt > p {
+    gap: 16px;
+  }
+
+  .card_items {
+    flex-direction: column;
+  }
+
+  /* ADVANTAGES */
+
+  .advantages {
+    padding-top: 30px;
+  }
+
+  .advantages_wrapper {
+    width: 100%;
+    gap: 24px;
+  }
+
+  .advantages_txt {
+    flex-direction: column;
+  }
+
+  .advantages_discriptions {
+    gap: 20px;
+  }
+
+  .stick > p {
+    gap: 20px;
+  }
+
+  .advantages_img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .advantages_info {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .advantages_ditails {
+    width: 100%;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  /* KIND EVACUATOR */
+
+  .kind_evacuators {
+    padding: 30px 0;
+  }
+
+  .kind_evacuators_info {
+    gap: 20px;
+  }
+
+  .slider-container {
+    flex-direction: column;
+  }
+
+  .slider_items {
+    display: none;
+  }
+
+  .slider_item > img {
+    width: 100%;
+  }
+
+  .slider-items_mob {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider_item {
+    min-width: 350px;
+    height: 660px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--main-color);
+    box-shadow: 2px 2px 10px 2px rgba(39, 52, 58, 0.15);
+  }
+
+  /* CALLING EVACUATOR */
+  .flex_info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .order_massage {
+    padding: 20px;
+    gap: 20px;
+  }
+  .flex_info > img {
+    width: 100%;
+  }
+
+  .d_none {
+    display: none;
+  }
+
+  /* PRICE EVACUATOR */
+
+  .price_evacuator {
+    margin: 30px 0;
+  }
+
+  .price_info {
+    padding: 20px;
+    gap: 20px;
+    border-radius: 20px;
+  }
+
+  .price_btns {
+    margin-bottom: 20px;
+  }
+
+  .price_btn {
+    padding: 8px 16px;
+    font-size: 24px;
+    background: transparent;
+    border-radius: 20px;
+    border: 1px solid var(--link-color);
+  }
+
+  .price_btn.active {
+    flex-direction: column;
+  }
+
+  .price_factors {
+    gap: 12px;
+  }
+
+  .home {
+    display: none;
+  }
+
+  /* ANNUCIATION PAGE 375PX */
+
+  .annunciation {
+    margin: 20px 0 20px;
+  }
+
+  .annunciation_wrapper {
+    gap: 32px;
+  }
+
+  .annunciation_header {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .annunciation_header > p {
+    font-size: 16px;
+  }
+
+  .form_wrapper {
+    gap: 36px;
+  }
+
+  .form_container {
+    gap: 18px;
+  }
+
+  .input_wrapper {
+    gap: 8px;
+  }
+
+  .input_wrapper > input,
+  .input_wrapper > select,
+  .input_wrapper > textarea,
+  .checkbox_price_item > input {
+    padding: 6px 18px 7px 18px;
+    border-radius: 8px;
+    border: 0.5px solid var(--link-color);
+    background: var(--main-color);
+    font-size: 16px;
+  }
+
+  .input_wrapper > textarea {
+    height: 180px;
+  }
+
+  .input_wrapper > label {
+    font-size: 16px;
+  }
+
+  .checkbox_price {
+    flex-direction: column;
+    gap: 12px;
+    align-items: start;
+  }
+  .checkbox_tick {
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .checkbox + label::after {
+    width: 24px;
+    height: 24px;
+  }
+
+  .checkbox_currency {
+    margin-left: 6px;
+    font-size: 16px;
+  }
+
+  /* FOOTER 375PX */
+
+  .footer_nav > a {
+    font-size: 13px;
+  }
+
+  .footer_nav > img {
+    width: 18px;
+    height: 18px;
+  }
+  .footer_nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/*  MODAL */
+
+.overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(89, 95, 97, 0.6);
+}
+
+.overlay.open {
+  display: flex;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 350px;
+  height: 160px;
+  border: 1px solid var(--txt-color);
+  text-transform: uppercase;
+  font-family: "SF Pro Text Semibold";
+  border-radius: 20px;
+  background-color: rgba(253, 255, 255, 0.8);
+}
+
+.modal_btn {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "SF Pro Text Semibold";
+  background: var(--link-color);
+  border-radius: 20px;
+  padding: 16px 36px;
+  border: none;
+}
+
+.modal_btn:hover {
+  opacity: 0.8;
+  color: var(--bg-color);
+}
